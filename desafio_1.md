@@ -1,5 +1,5 @@
-### Tarefa 1
-- Realização da tarefa/desafio 1: Pesquisar no site TCCOnline (https://tcconline.lapinf.ufn.edu.br) trabalhos finais de graduação que investigaram e/ou aplicaram a Computação (em geral) em contextos da Saúde. Montar um quadro com: título do trabalho, curso, nomes aluno e orientador, link do trabalho, descrição básica do trabalho, rotinas da Saúde trabalhadas (diagnóstico; monitoramento; recomendação; predição ou previsão)
+### Atividade 1
+    - Realização da tarefa/desafio 1: Pesquisar no site TCCOnline (https://tcconline.lapinf.ufn.edu.br) trabalhos finais de graduação que investigaram e/ou aplicaram a Computação (em geral) em contextos da Saúde. Montar um quadro com: título do trabalho, curso, nomes aluno e orientador, link do trabalho, descrição básica do trabalho, rotinas da Saúde trabalhadas (diagnóstico; monitoramento; recomendação; predição ou previsão)
 
 
 <!-- Titulo: Desenvolvimento De Um Sistema Web Para Acompanhamento De Pacientes Em Tratamento De Incontinência Urinária
@@ -30,6 +30,8 @@ Descrição: Sistema que lembra o usuário de consumir seu medicamento corretame
 Rotinas: Recomendação, monitoramento
 Link:https://tcconline.lapinf.ufn.edu.br/media/midias/TCC_II_5bxh4rt.pdf -->
 
+
+### Tabela com trabalhos pesquisados
 
 
 
