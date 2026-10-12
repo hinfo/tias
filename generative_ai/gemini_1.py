@@ -43,10 +43,10 @@ class GenerateSqlString:
                 contents=prompt,
                 config=self.config,
             )
-            print("Resposta do modelo:", response.text)
+            print(f"Resposta do modelo: {response.text}")
 
-            data = json.loads(response.text)
-            sql_bruto = data["sql"]
+            data = json.loads(response.text or "{}")
+            sql_bruto = data.get("sql", "")
             print(sql_bruto)
             self.calculate_tokens(
                 question=question, schema=schema, response=response, raw_sql=sql_bruto
@@ -72,7 +72,7 @@ if __name__ == "__main__":
     sql_generate = GenerateSqlString()
 
     pergunta = "quantos trabalhos submetidos são do curso de biomedicina"
-    # pergunta = "preciso o email e o número do c"gemini-3.1-flash-lite"elular do pesquisador que tenha no nome as palavras alexandre zamberlan"
+    # pergunta = "preciso o email e o número do celular do pesquisador que tenha no nome as palavras alexandre zamberlan"
     # pergunta = "Quais os professores que submeteram trabalhos com a palavra 'aids'?"
     # pergunta = "Quantos usuários do tipo professor há?"
     # pergunta = "Quais livros a ana paula henriques pegou?"
