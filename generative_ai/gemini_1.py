@@ -1,11 +1,10 @@
 import json
 from os import environ
 
+from db_schema import DbSchema
 from google import genai
 from google.genai import types
 from pydantic import BaseModel
-
-from db_schema import DbSchema
 
 
 class SqlResponse(BaseModel):
@@ -49,12 +48,13 @@ class GenerateSqlString:
             data = json.loads(response.text)
             sql_bruto = data["sql"]
             print(sql_bruto)
-            self.calculate_tokens(question=question, schema=schema, response=response, raw_sql=sql_bruto)
+            self.calculate_tokens(
+                question=question, schema=schema, response=response, raw_sql=sql_bruto
+            )
 
         except Exception as e:
             print("Erro ao gerar o SQL:", e)
 
-    
     def calculate_tokens(self, question: str, schema: str, response, raw_sql):
         palavras = question.split()
         palavras += schema.split()
@@ -68,7 +68,7 @@ class GenerateSqlString:
         print(f"Tokens estimados: {tokens_estimados}")
 
 
-if __name__ ==  "__main__":
+if __name__ == "__main__":
     sql_generate = GenerateSqlString()
 
     pergunta = "quantos trabalhos submetidos são do curso de biomedicina"
@@ -79,6 +79,3 @@ if __name__ ==  "__main__":
     # pergunta = "Quais leitores tem a letra W no primeiro nome?"
     schema = DbSchema().get_schema()
     sql_generate.get_statement(question=pergunta, schema=schema)
-
-
-
